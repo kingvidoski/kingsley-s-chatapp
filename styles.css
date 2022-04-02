@@ -139,6 +139,7 @@ nav span.app {
   height: calc(110vh - 10px);
   background: #327d7d;
   margin: 0 120px 0 135px;
+  min-height: 730px;
 }
 
 .section.upper .container {
@@ -170,9 +171,17 @@ img.smile2 {
 .text1 img,
 .text2 img {
   width: 28px;
-  clip-path: circle();
+  clip-path: circle(40% at 50% 40%);
   margin-right: 12px;
   margin-left: 12px;
+}
+
+.text1 img{
+  clip-path: circle(40% at 50% 47%);
+}
+
+.text2 img{
+clip-path: circle(40% at 50% 40%);
 }
 
 .text1 {
@@ -362,6 +371,7 @@ img.smile2 {
   height: 135vh;
   margin: 0 120px 0 135px;
   background: #ffffff;
+  min-height: 910px;
 }
 
 .section.middle .container {
@@ -429,6 +439,7 @@ img.smile2 {
   height: 100vh;
   margin: 0 120px 0 135px;
   background: #e8fbff71;
+  min-height: 730px;
 }
 
 .section.lower .container {
@@ -579,6 +590,7 @@ footer {
   background: #fff;
   margin: 0 120px 0 135px;
   padding-bottom: 20px;
+  min-height: 500px;
 }
 
 footer .container {
@@ -650,6 +662,14 @@ footer .container p {
   font-size: 11px;
 }
 /* MEDIA QUERIES */
+@media screen and (max-width: 1440px) {
+  .section.lower .left .bottom.image .vertical {
+    bottom: 177px;
+  }
+  .section.lower .left .bottom.image .horizontal {
+    bottom: 87px;
+  }
+}
 @media screen and (max-width: 1420px) {
   .section.lower .left .bottom.image .vertical {
     bottom: 147px;
@@ -973,6 +993,9 @@ footer .container p {
     width: 41%;
     bottom: 40px;
   }
+  .section.upper{
+    min-height: 670px;
+  }
   .section.upper .top.image .vertical {
     grid-template: repeat(10, 9px) / repeat(2, 10px);
     top: -56px;
@@ -1042,7 +1065,12 @@ footer .container p {
     bottom: 190px;
   }
   .section.middle {
+    min-height: 730px;
     height: 110vh;
+  }
+  .section.lower{
+    height: 86vh;
+    min-height: 580px;
   }
   .section.lower .right {
     width: 320px;
@@ -1081,7 +1109,9 @@ footer .container p {
   .section.lower .left .bottom.image .horizontal {
     display: none;
   }
-
+  footer{
+    min-height: 350px;
+  }
   footer .main .one .logo {
     font-size: large;
     margin-bottom: 6px;
@@ -1196,7 +1226,7 @@ footer .container p {
     width: 340px;
   }
   .section.lower {
-    height: 90vh;
+    height: 80vh;
     margin: 0 130px 0 100px;
   }
   footer {
@@ -1226,6 +1256,12 @@ footer .container p {
   .text1 img,
   .text2 img {
     width: 18px;
+  }
+  img.smile2{
+    bottom: 40px;
+  }
+  .section.upper{
+    height: 88vh;
   }
   .section.upper .top.image .vertical {
     grid-template: repeat(10, 7px) / repeat(2, 8px);
@@ -1264,7 +1300,10 @@ footer .container p {
     width: 540px;
   }
   .section.middle {
-    height: 105vh;
+    height: 95vh;
+  }
+  .section.middle .down {
+    bottom: 250px;
   }
   .section.lower .container {
     padding-right: 50px;
@@ -1338,12 +1377,22 @@ footer .container p {
   .text2 {
     top: 142px;
   }
+  .section.upper{
+    min-height: 580px;
+  }
   .section.upper .top.image .vertical {
     grid-template: repeat(10, 7px) / repeat(2, 8px);
     left: -8px;
   }
+  .section.middle .down {
+    bottom: 245px;
+  }
 }
 @media screen and (max-width: 898px) {
+  .section.upper{
+    height: 70vh;
+    min-height: 560px;
+  }
   .section.upper .right {
     width: 40%;
   }
@@ -1428,8 +1477,6 @@ footer .container p {
   footer .main .table td {
     padding-bottom: 24px;
   }
-}
-@media screen and (max-width: 898px) {
   footer .main .p {
     top: 90px;
   }
@@ -1462,6 +1509,7 @@ footer .container p {
   }
   .section.upper {
     height: 74vh;
+    min-height: 520px;
   }
   .section.upper .left {
     width: 245px;
@@ -1485,7 +1533,8 @@ footer .container p {
     width: 460px;
   }
   .section.middle {
-    height: 95vh;
+    height: 75vh;
+    min-height: 620px;
   }
   .section.middle .up .horizontal {
     grid-template: repeat(2, 9px) / repeat(10, 9px);
@@ -1499,6 +1548,10 @@ footer .container p {
   .section.middle .down {
     grid-template: repeat(10, 10px) / repeat(3, 10px);
     bottom: 285px;
+  }
+  .section.lower{
+    height: 70vh;
+    min-height: 500px;
   }
   .section.lower .left .image {
     width: 260px;
@@ -1534,6 +1587,7 @@ footer .container p {
   }
   footer {
     height: 48vh;
+    min-height: 330px;
   }
 }
 @media screen and (max-width: 758px) {
@@ -1627,6 +1681,9 @@ footer .container p {
     right: 100px;
     bottom: 14px;
   }
+  .section.upper{
+    min-height: 480px;
+  }
   .section.upper .left {
     width: 200px;
   }
@@ -1650,13 +1707,18 @@ footer .container p {
     width: 400px;
   }
   .section.middle {
-    height: 90vh;
+    height: 70vh;
+    min-height: 560px;
   }
   .section.middle .down {
     bottom: 335px;
   }
   .section.lower .left .image {
     width: 200px;
+  }
+  .section.lower{
+    height: 65vh;
+    min-height: 430px;
   }
   .section.lower .left .top.image {
     grid-template: repeat(2, 7px) / repeat(10, 7px);
@@ -1778,7 +1840,8 @@ footer .container p {
     margin-top: 20px;
   }
   footer {
-    height: 40vh;
+    height: 30vh;
+    min-height: 250px;
   }
   footer .container {
     padding: 40px 0 0 40px;
@@ -1838,6 +1901,10 @@ footer .container p {
   .section.upper .right {
     width: 72%;
   }
+  .section.middle{
+    height: 60vh;
+    min-height: 510px;
+  }
   .section.middle .container {
     padding: 70px 0 0 0;
   }
@@ -1877,6 +1944,10 @@ footer .container p {
   .section.middle .big.image {
     left: 40px;
   }
+  .section.lower {
+    height: 70vh;
+    min-height: 460px;
+  }
 }
 @media screen and (max-width: 519px) {
   nav .logo span {
@@ -1889,6 +1960,13 @@ footer .container p {
   }
   nav ul li {
     padding: 0 10px;
+  }
+  .section.upper .left .link .one {
+    padding: 9px 0 0 8px;
+  }
+  
+  .section.upper .left .link .two {
+    padding: 7px 0 0 4px;
   }
   .section.upper .left .link {
     left: 160px;
@@ -1994,6 +2072,9 @@ footer .container p {
   .special {
     position: initial;
     margin-top: 10px;
+  }
+  .section.upper{
+    min-height: 530px;
   }
   .section.upper .container {
     padding: 20px 30px;
@@ -2107,6 +2188,9 @@ footer .container p {
   img.smile2 {
     width: 32%;
   }
+  .section.upper {
+    min-height: 460px;
+  }
   .section.upper .left h1 {
     font-size: 1.6em;
   }
@@ -2116,6 +2200,9 @@ footer .container p {
   .section.upper .left .link {
     top: 70px;
     left: -10px;
+  }
+  .section.middle{
+    min-height: 460px;
   }
   .section.middle .big.image {
     width: 280px;
